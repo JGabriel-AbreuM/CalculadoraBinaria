@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <title>{% block title %} Calculadora binaria {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'calc/style.css' %}">
+    <link rel="stylesheet" href="{% static 'calc/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'calc/result.css' %}">
+</head>
+<body>
+    <div class="intro">
+        <a href="https://ejrgeekio.com/"><img src="{% static 'calc/logo.png' %}" alt=""></a>
+        <h1>Calculadora Binária</h1>
+    </div>
+    {% block content %}{% endblock %}
+</body>
+</html>

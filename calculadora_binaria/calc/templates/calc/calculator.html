@@ -1,0 +1,17 @@
+{% extends 'calc/layouts/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+    <div class="form">
+        <form action="" method="post">
+            <legend>Digite a sentença em binário</legend>
+            {% csrf_token %}
+            {% render_field form.sentenca id+="sentenca" autocomplete+="off" class+="sentenca" placeholder+="Digite a sentença aqui!"%}
+            <br>
+            <div class="form-button">
+                <input class="go-button" type="submit" value="Calcular">
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

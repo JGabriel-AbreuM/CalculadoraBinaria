@@ -1,0 +1,21 @@
+{% extends 'calc/layouts/base.html' %}
+
+{% block content %}
+    <div class="content">
+        <h3>Resultado</h3>
+        <div class="resultado">
+            <p class="sentenca">{{ sentenca }}</p>
+
+            {% if resultado %}
+                
+                <p class="result">{{ resultado }}</p>
+
+            {% endif %}
+        </div>
+        <div class="form-button">
+            <a href="{% url 'calc:calculadora_binario'%}"><button class="go-button">Nova Senteça</button></a>
+        </div>
+    </div>
+
+
+{% endblock %}
