@@ -1,11 +1,11 @@
 def bin2dec(b):
-	number = 0
-	counter = 0
+	num = 0
+	count = 0
 	for i in b[::-1]: 
-		number += int(i)*(2**counter)
-		counter += 1
+		num += int(i)*(2**count)
+		count += 1
 
-	return str(number)
+	return str(num)
 
 def resolve_equacao(sentenca):
 	sentenca = sentenca.replace(" ", "")
