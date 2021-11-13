@@ -22,12 +22,13 @@ def resolve_equacao(sentenca):
 
 	equacao += bin2dec(elemento)
 	try:
-		resultado = bin(eval(equacao))[2:]
+		if (eval(equacao) - int(eval(equacao))) == 0:
+			resultado = bin(int(eval(equacao)))[2:]
+
+		else:
+			resultado = "Impossível converter um 'float' em binario"
 	
 	except ZeroDivisionError:
 		resultado = "Impossível dividir por 0"
 
-	except TypeError:
-		resultado = "Impossível converter um 'float' em binario"
-	
 	return resultado 
